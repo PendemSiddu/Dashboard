@@ -1,0 +1,58 @@
+<!-- login page -->
+<div class="login-page">
+  <div class="row m-0">
+    <div class="col-md-4"></div>
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      <div class="login-content bg-white">
+        <h1 class="login-logo">
+          <img src="assets/img/logo.png" alt="Logo" />
+        </h1>
+        <h3>Sign in your account</h3>
+
+        <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>User name</mat-label>
+            <input
+              matInput
+              placeholder="Please enter your username"
+              [(ngModel)]="userName"
+            />
+          </mat-form-field>
+          <mat-error *ngIf="loginError">
+            Please inform your password
+          </mat-error>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              placeholder="Password"
+              type="password"
+              [(ngModel)]="password"
+            />
+          </mat-form-field>
+          <mat-error *ngIf="loginError">
+            Please inform your password
+          </mat-error>
+        </div>
+        <div class="form-group">
+          <button
+            class="mat-flat-button"
+            mat-raised-button
+            color="primary"
+            (click)="login()"
+          >
+            Sign In
+          </button>
+        </div>
+        <!-- <div class="form-group mt-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>Remember me</mat-checkbox>
+                            <a class="forgot" mat-button color="primary" href="javascript:void(0)">Forgot Password?</a>
+                        </div>
+                    </div>-->
+      </div>
+    </div>
+  </div>
+</div>

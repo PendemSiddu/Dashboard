@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-12">
+    
+ 
+      <div class="chartWrapper">
+        <div class="chartHeader">
+          <div class="row align-items-baseline">
+            <div class="row">
+              <div class="col-6">
+              <h3>
+                Program metrics - Average score Comparison
+                <small>(Showing scale out of 7 points)</small>
+              </h3>
+            </div>
+            <div class="col-6" style="float: right; text-align: end">
+              <label for="fiscal-quarters"> Year &nbsp;</label>
+              <select [(ngModel)]="selectedOptions">
+              
+              <option>CY-2023</option>
+              <option>CY-2024</option>
+              <option>CY-2025</option>
+              </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div *ngIf="selectedOptions === 'CY-2023'">
+        <app-Fin11></app-Fin11>
+       </div>
+
+
+<div *ngIf="selectedOptions === 'CY-2024'">
+<app-program>
+</app-program>
+</div>
+
+<div *ngIf="selectedOptions === 'CY-2025'">
+<app-programm></app-programm>
+</div>

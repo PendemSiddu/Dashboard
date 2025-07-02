@@ -1,0 +1,41 @@
+<div class="chartHeader">
+  <div class="row align-items-baseline">
+    <div class="row"></div>
+    <div class="col-12">
+      <mat-card>
+        <H1>SOW Status CY2025</H1>
+        <div class="row"></div>
+        <table class="table">
+          <tr>
+            <th rowspan="2">Program Name</th>
+            <th rowspan="2">Field Glass ID</th>
+            <th colspan="4">SOW Status</th>
+            <th rowspan="2">PO Status</th>
+            <th rowspan="2">PO Received Date</th>
+            <th rowspan="2">PO#</th>
+            <th rowspan="2">PO Amt(USD)</th>
+            <th rowspan="2">Available Amt(USD)</th>
+          </tr>
+          <tr>
+            <th>Draft SOW Shared to Abbott</th>
+            <th>Received Procurement Acceptance</th>
+            <th>HCL Signed SOW</th>
+            <th>Both Parties Signed SOW</th>
+          </tr>
+          <tr *ngFor="let i of datas.slice(1); let j=index">
+            <td>{{i.key}}</td>
+            <td>{{i.value1}}</td>
+            <td>{{i.value2 | date:'dd-MMM-yy' }}</td>
+            <td>{{i.value3 | date:'dd-MMM-yy' }}</td>
+            <td>{{i.value4 | date:'dd-MMM-yy' }}</td>
+            <td>{{i.value5 | date:'dd-MMM-yy' }}</td>
+            <td>{{i.value6}}</td>
+            <td>{{i.value7 | date:'dd-MMM-yy' }}</td>
+            <td>{{i.value8}}</td>
+            <td>{{i.value9 | currency:'USD':'symbol' }}</td>
+            <td>{{i.value10 | currency:'USD':'symbol' }}</td>
+          </tr>
+        </table>
+      </mat-card>
+    </div>
+  </div>

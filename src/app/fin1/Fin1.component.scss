@@ -1,0 +1,28 @@
+.table-chart-container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  justify-content: space-between;  
+  margin-right: 15px;
+}
+
+.table1 {
+  font-size: 12px;
+  width: 100%;
+
+  th,
+  td {
+    
+    padding: 8px;
+    text-align: left;
+    align-items: flex-end;
+    border-bottom: 1px solid #f2f2f2;
+  }
+}
+
+.id {
+  align-items: flex-end;
+}
+
+
+

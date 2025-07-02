@@ -1,0 +1,306 @@
+<div class="chartHeader">
+  <div class="row align-items-baseline">
+    <div class="row"></div>
+    <div class="col-6">
+      <mat-card class="nobg">
+        <div class="row">
+          <div class="col-7 pageTitle">Engagement Health &nbsp;</div>
+
+          <div class="col-5">
+            <label for="fiscal-quarters"> Quarters &nbsp;</label>
+            <select
+              id="fiscal-quarters"
+              (change)="changeGraph()"
+              [(ngModel)]="month"
+            >
+              <option
+                *ngFor="let food of allMonths; let i = index"
+            
+                [value]="food.Month"
+              >
+                {{ food.Month }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+          <div class="col-6">Please choose a program to view the details</div>
+          <div class="col-6 col6">
+            <div class="flex-container">
+              <span class="gl"></span>
+              <span class="fl"> On Track</span>
+            </div>
+            <div class="flex-container">
+              <span class="rl"></span>
+              <span class="fl"> Need Attention&nbsp;&nbsp;</span>
+            </div>
+            <div class="flex-container">
+              <span class="grl"></span>
+              <span class="fl"> Off Track</span>
+            </div>
+          </div>
+        </div>
+        <br />
+        <table class="table-striped table">
+          <thead>
+            <td class="blue-bg1">Projects</td>
+
+            <td class="blue-bg1">Budget</td>
+            <td class="blue-bg1">Resources</td>
+            <td class="blue-bg1">Schedule</td>
+            <td class="blue-bg1">Overall Health</td>
+          </thead>
+          <tr
+            *ngFor="let item of healthIndicator; let i = index"
+            [class.highlighted]="item.highlighted"
+          >
+            <ng-container *ngIf="item.key === month">
+              <td class="cursor" (click)="showHide(i, item.value1)">
+                <span class="breakWord" [innerHTML]="item.value1"> </span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value2 == 'As per projection'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value2 != 'As per projection'"
+                ></span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value3 == 'No Open positions'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value3 != 'No Open positions'"
+                ></span>
+              </td>
+              <td>
+                <span
+                  class="greenCircle"
+                  *ngIf="item.value4 == 'As per Schedule'"
+                ></span>
+                <span
+                  class="redCircle"
+                  *ngIf="item.value4 != 'As per Schedule'"
+                ></span>
+              </td>
+              <td>
+                <span class="greenCircle" *ngIf="item.value5 == 'Green'"></span>
+                <span class="redCircle" *ngIf="item.value5 != 'Green'"></span>
+              </td>
+            </ng-container>
+          </tr>
+        </table>
+      </mat-card>
+      <!-- <br>
+      <mat-card *ngIf="results?.length <= 0" > -->
+<!-- 
+        <div style="font-size: 30px;">Lesson Learnt</div>
+        <br>
+        <br>
+
+        <div class="row">
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;">
+              <div class="inline-content">
+              <div class="number">1</div>
+              <div class="name">Detailed Documentation</div>
+              </div>
+              <br>
+              <div>In Requirement document, modules details and configuration details were not captured elaborately.​</div>
+            </mat-card>
+          </div>
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;" >
+        <br>
+        
+              <div>Requirement document to capture all details of modules including configuration more elaborately.​​​</div>
+              <br>
+            </mat-card>
+          </div>
+        </div>
+ <br>
+
+        <div class="row">
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;">
+              <div class="inline-content">
+              <div class="number">2</div>
+              <div class="name">Planning and Estimation for integration</div>
+              </div>
+              <br>
+            
+              <div>Few unintended configuration changes impacted   integration effort​​</div>
+            </mat-card>
+          </div>
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;" >
+              
+              
+              <br>
+              <div>Plan and list the Configuration changes before integrating the services and will not impact the planned effort hours.​​</div>
+           
+              
+            </mat-card>
+          </div>
+        </div>
+
+       <br>
+
+        <div class="row">
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;">
+              <div class="inline-content">
+              <div class="number">3</div>
+              <div class="name">Trainings on due​</div>
+              </div>
+              <br>
+            
+              <div>Some of the engineers has the delayed completion of trainings​​​</div>
+            </mat-card >
+          </div>
+          <div class="col-6">
+            <mat-card style=" background-color:  #f0f4f8;" >
+              
+             
+              <div>Established the process to get managers notify on team members training dues. Weekly audits to ensure training compliance.​​​​</div>
+              
+            </mat-card>
+          </div>
+        </div> -->
+
+      <!-- </mat-card> -->
+    </div>
+    <div class="col-6">
+      <!--<h3>{{ title }}</h3>-->
+
+      <mat-card *ngIf="results?.length <= 0" 
+        >Please choose on any program to show details here</mat-card
+      >
+      <!-- <br />
+      <mat-card *ngIf="results?.length <= 0" >
+
+        <div style="font-size: 30px;">What went well</div>
+        <br>
+        <br>
+
+  <div class="row">
+      <div class="col-4">
+       <mat-card style="background-color:  #f0f4f8;">
+        <div class="inline-content">
+        <div class="number">1</div>
+        <div class="name">Smooth Hercules release </div>
+        </div>
+        <br>
+        <div>Hercules BSI – BSI submission successfully for Hercules release.​​</div>
+       </mat-card>
+    </div>
+
+    <div class="col-4">
+      <mat-card style="background-color:  #f0f4f8;">
+        <div class="inline-content">
+       <div class="number">2</div>
+       <div class="name">Digital Dashboard - Tracking</div>
+      </div>
+      <br>
+       <div>Tracking of Development & Testing milestones captured in detailed Dashboard with burnt down</div>
+      </mat-card>
+   </div>
+
+   <div class="col-4">
+    <mat-card style="background-color:  #f0f4f8;">
+      <div class="inline-content">
+     <div class="number">3</div>
+     <div class="name">Close Collaboration</div>
+    </div>
+    <br>
+     <div>Closely worked with Abbott leads to define requirements. Owned and implement the solution for requirements.​</div>
+    </mat-card>
+ </div>
+  </div>
+  <br>
+  <div class="row">
+   
+    <div class="col-4">
+      <mat-card style="background-color:  #f0f4f8;">
+        <div class="inline-content" >
+       <div class="number">4</div>
+       <div class="name">Development and QA as relay handoff </div>
+      </div>
+      <br>
+       <div>Close collaboration between HCL and Abbott teams on dev and QA activities.</div>
+      </mat-card>
+   </div>
+
+   <div class="col-4">
+    <mat-card style="background-color:  #f0f4f8;">
+      <div class="inline-content">
+     <div class="number">5</div>
+     <div class="name">One team, trusted partner</div>
+    </div>
+    <br>
+     <div>Extended hours, weekend  support for Hercules release​<br>
+
+      Responsibilities shared to  take advantage of strengths between HCL and Abbott​​</div>
+    </mat-card>
+ </div>
+
+ 
+
+  </div>
+
+        </mat-card> -->
+
+
+
+      <!-- <mat-card *ngIf="results?.length > 0" class="babyPink">
+        <div class="col-4 pageTitle">Key message</div>
+        <br />
+        <div *ngFor="let item of results" class="showHide">
+          <table class="table table-bordered">
+            <ng-container>
+              <tr *ngFor="let value of item.values">
+                <td style="white-space: pre-line">{{ value.value6 }}</td>
+              </tr>
+            </ng-container>
+          </table>
+        </div>
+      </mat-card> -->
+      
+      <mat-card *ngIf="results?.length > 0" class="lightBlue">
+        <div class="col-4 pageTitle">Accomplishments</div>
+        <br />
+        <div *ngFor="let item of results">
+          <table class="table table-bordered">
+            <ng-container>
+              <tr *ngFor="let value of item.values">
+                <td style="white-space: pre-line">{{ value.value7 }}</td>
+              </tr>
+            </ng-container>
+          </table>
+        </div>
+      </mat-card>
+      <br />
+      <mat-card *ngIf="results?.length > 0" class="wblue">
+        <div class="col-4 pageTitle">Risks/Issues</div>
+        <br />
+        <div *ngFor="let item of results">
+          <table class="table table-bordered">
+            <ng-container>
+              <tr *ngFor="let value of item.values">
+                <td style="white-space: pre-line">{{ value.value8 }}</td>
+              </tr>
+            </ng-container>
+          </table>
+        </div>
+      </mat-card>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="padding">
+<div class="row">
+    <div class="col-6 pageTitle">{{header}} </div>
+    <div class="col-6">
+    </div>
+
+</div>
+<div class="row pageContent">
+    <div class="row">
+        <div class="col-12">
+           <table class="table table-bordered">
+            <ng-container *ngFor="let data of datas ; let i = index">
+            <tr>
+                <td *ngIf="data.key" class="p5">{{data.key}}</td>
+                <td *ngIf="data.value1" class="p5">{{data.value1}}</td>
+                <td *ngIf="data.value2" class="p5">{{data.value2}}</td>
+                <td *ngIf="data.value3" class="p5">{{data.value3}}</td>
+                <td *ngIf="data.value4" class="p5">{{data.value4}}</td>
+                <td *ngIf="data.value5" class="p5">{{data.value5}}</td>
+                <td *ngIf="data.value6" class="p5">{{data.value6}}</td>
+                <td *ngIf="data.value7" class="p5">{{data.value7}}</td>
+                <td *ngIf="data.value8" class="p5">{{data.value8}}</td>
+                <td *ngIf="data.count" class="p5">{{data.count}}</td>                
+            </tr>
+        </ng-container>
+           </table>
+            </div>
+        </div>
+        </div>
+    </div>

@@ -1,0 +1,153 @@
+.greenCircle {
+
+    width: 15px;
+    /* Adjust the dimensions as per your requirement */
+    height: 15px;
+    /* Adjust the dimensions as per your requirement */
+    border-radius: 50%;
+    background-image: url('../../assets/img/ok.png');
+    background-size: cover;
+    /* This will scale the image to cover the entire element */
+    background-position: center;
+    /* This will center the image within the element */
+    text-align: center;
+    margin: auto;
+    display: block;
+  
+}
+.blue-bg{
+  background: #d5f1ff
+}
+.redCircle {
+    width: 15px;
+      /* Adjust the dimensions as per your requirement */
+      height: 15px;
+      /* Adjust the dimensions as per your requirement */
+      border-radius: 50%;
+      background-image: url('../../assets/img/not-ok.png');
+      background-size: cover;
+      /* This will scale the image to cover the entire element */
+      background-position: center;
+      /* This will center the image within the element */
+      text-align: center;
+      margin: auto;
+      display: block;
+}
+th,
+td {
+  padding: 5px;
+  white-space: nowrap;
+}
+table {
+  border: 1px solid #f2f2f2;
+}
+.cursor{
+      cursor: pointer;
+}
+.breakWord{
+  word-break:break-all;
+}
+.highlighted {
+  position: relative;
+  /* Set the position to relative so that the ::after element can be positioned relative to this element */
+  background-color: #D5F1FF;
+}
+
+.highlighted::after {
+  content: "";
+  /* Empty content */
+  position: absolute;
+  /* Absolute position */
+  left: 0;
+  /* Positioned at the left edge of the parent element */
+  top: 0;
+  /* Positioned at the top edge */
+  bottom: 0;
+  /* Extend to the bottom */
+  width: 4px;
+  /* Width of the tick bar */
+  background-color: #F1C40F;
+  /* Color of the tick bar */
+}
+.babyPink{
+  background-color: #DDEEF9;
+}
+.lightBlue{
+  background-color: #EBFBEA;
+}
+.wblue{
+  background-color: #FFFCE8;
+}
+
+.col6 {
+  display: flex;
+  /* This makes it a flexbox container */
+  justify-content: space-between;
+  /* Space them out equally */
+}
+select{
+  padding:6px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.gl {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2ECC71;
+  text-align: center;
+}
+
+.fl {
+  margin-left: 5px;
+  /* Added some space between the circle and the text */
+}
+.rl {
+  width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    text-align: center;
+  background-color: #ec4c17e0;
+}
+.grl {
+  width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    text-align: center;
+  background-color: #E74C3C;
+}
+mat-card{
+  background-color: none;
+}
+.blue-bg1{
+  background-color: #159BD7;
+  color:white
+}
+
+.col-4{
+  display:flex;
+  flex-direction: row;
+  
+}
+
+.inline-content {
+  display: flex; /* Use flexbox to put them in the same line */
+  align-items: center; /* Align items vertically in the center */
+}
+
+.number {
+  margin-right: 10px; /* Add some space between the number and the text */
+  font-weight: bold; /* Optional: Make the number bold */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+.name {
+  font-size: large; /* Optional: Make the text bold */
+}
+

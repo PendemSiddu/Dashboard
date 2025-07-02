@@ -1,0 +1,140 @@
+<div class="row pageContent">
+  <mat-card>
+    <div class="col-4 pageTitle">Asset Onboarding/Deboarding Trends</div>
+    <br />
+
+    <div class="row">
+      <div class="col-3">
+        <br />
+        <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1" [checked]="true"
+            >Onboarding</mat-radio-button
+          >
+          &nbsp;
+          <mat-radio-button value="2">Deboarding</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <mat-select [(ngModel)]="modeselect">
+            <mat-option *ngFor="let fruit of fruits" [value]="fruit.value">
+              {{ fruit.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field appearance="outline" class="col-sm-12">
+          <mat-label>Date from</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            autofocus
+            [formControl]="serializedDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field appearance="outline" class="col-sm-12">
+          <mat-label>Date to</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            autofocus
+            [formControl]="serializedDate"
+          />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-1">
+        <img src="assets/img/pdf.svg" class="downloadIcon" />
+        <img src="assets/img/xl.svg" class="downloadIcon" (click)="downloadXl()"/>
+      </div>
+    </div>
+
+    <div id="linechart3" style="width: 100%; height: 300px"></div>
+  </mat-card>
+
+  <div class="h50"></div>
+
+  <mat-card>
+    <div class="col-4 pageTitle">Causes of Asset De-assigned</div>
+    <br />
+
+    <div class="row">
+      <div class="col-3">
+        <mat-form-field appearance="outline">
+          <mat-label>Location</mat-label>
+          <mat-select [(ngModel)]="modeselect">
+            <mat-option *ngFor="let fruit of fruits" [value]="fruit.value">
+              {{ fruit.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-2">
+        <mat-form-field appearance="outline">
+          <mat-label>Asset Type</mat-label>
+          <mat-select [(ngModel)]="empselect">
+            <mat-option *ngFor="let fruit of emp" [value]="fruit.value">
+              {{ fruit.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field appearance="outline" class="col-sm-12">
+          <mat-label>Date from</mat-label>
+          <input matInput [matDatepicker]="picker" autofocus [formControl]="serializedDate" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field appearance="outline" class="col-sm-12">
+          <mat-label>Date to</mat-label>
+          <input matInput [matDatepicker]="picker" autofocus [formControl]="serializedDate" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-1">
+        <img src="assets/img/pdf.svg" class="downloadIcon" />
+        <img src="assets/img/xl.svg" class="downloadIcon" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div id="piechart112z" style="width: 100%; height: 300px"></div>
+      </div>
+      <div class="col-6">
+        <div id="chartdiv22z" style="width: 100%; height: 300px"></div>
+        <br />
+        <span>
+          <b>
+            Abbott devices - IPG, SCS, Leads etc.<br />Others - Test fixtures,
+            Dongles, Test Equipments etc.
+          </b>
+        </span>
+      </div>
+    </div>
+  </mat-card>
+</div>

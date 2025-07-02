@@ -1,0 +1,141 @@
+.greenCircle {
+  
+    background-image: url('../../assets/img/ok.png');
+    background-size: 15px;
+    /* This will scale the image to cover the entire element */
+    background-position: center;
+    /* This will center the image within the element */
+    text-align: center;
+    margin: auto;
+    background-repeat: no-repeat;
+    
+}
+.yellowCircle {
+    
+      background-image: url('../../assets/img/yellow-ok.png');
+      background-size: 15px;
+      /* This will scale the image to cover the entire element */
+      background-position: center;
+      background-repeat: no-repeat;
+      /* This will center the image within the element */
+      text-align: center;
+      margin: auto;
+      // display: block;
+}
+.greyCircle {
+   
+      background-image: url('../../assets/img/blue-ok.png');
+      background-size: 15px;
+      background-repeat: no-repeat;
+      /* This will scale the image to cover the entire element */
+      background-position: center;
+      /* This will center the image within the element */
+      text-align: center;
+      margin: auto;
+      // display: block;
+}
+.redCircle {
+  background-image: url('../../assets/img/red-cross.png');
+  background-size: 15px;
+  background-repeat: no-repeat;
+  /* This will scale the image to cover the entire element */
+  background-position: center;
+  /* This will center the image within the element */
+  text-align: center;
+  margin: auto;
+    // display: block;
+}
+th,
+td {
+  padding: 4px;
+  border: 1px solid #c9c7c7;
+  white-space: nowrap;
+}
+table {
+  border: 1px solid #c9c7c7;
+}
+.cursor{
+      cursor: pointer;
+}
+.breakWord{
+  word-break:break-all;
+}
+.highlighted {
+  background-color: #9797fb;
+}
+.babyPink{
+  background-color: #fbffd5;
+}
+.lightBlue{
+  background-color: #ede5ff;
+}
+.wblue{
+  background-color: #eafff4;
+}
+
+
+select {
+  padding: 6px 20px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.gl {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2ECC71;
+  text-align: center;
+}
+.col6 {
+  display: flex;
+  /* This makes it a flexbox container */
+  justify-content: space-between;
+  /* Space them out equally */
+}
+.fl {
+  margin-left: 5px;
+  /* Added some space between the circle and the text */
+}
+
+.rl {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #F1C40F;
+}
+
+.grl {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #435F7A;
+}
+.red {
+  width: 15px;
+  /* Adjust the dimensions as per your requirement */
+  height: 15px;
+  /* Adjust the dimensions as per your requirement */
+  border-radius: 50%;
+  background-color: red;
+  background-size: cover;
+  /* This will scale the image to cover the entire element */
+  background-position: center;
+  /* This will center the image within the element */
+  text-align: center;
+  margin: auto;
+  display: block;
+}
+.cross{
+  font-weight: bold;
+    color: white;
+    top: -9px;
+    position: relative;
+    left: -4px;
+    margin: auto;
+}

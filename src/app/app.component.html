@@ -1,0 +1,42 @@
+<mat-toolbar class="mat-elevation-z8" *ngIf="showMenu">
+  <img src="assets/img/logo.png" />
+  <mat-divider vertical style="height: 100px; padding: 10px"></mat-divider>
+
+  <span class="toolBarRight"></span>
+  <!-- <span class="lastRefer"
+    >Showing data of :
+    <b>
+      <mat-form-field
+        appearance="fill"
+        style="width: 150px; top: 5px; position: relative"
+      >
+        <mat-label>Quater</mat-label>
+        <mat-select (selectionChange)="changeGraph()" [(ngModel)]="month">
+          <mat-option
+            *ngFor="let food of allMonths; let i = index"
+            [value]="food.Month"
+          >
+            {{ food.Month }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field></b
+    ></span
+  >
+  <mat-divider vertical style="height: 100px; padding: 10px"></mat-divider>-->
+  <span class="lastRefer">Last Refreshed on {{ lastRefreshed }}</span>
+  <mat-icon class="erroColor">notifications_none</mat-icon>
+  <mat-divider vertical style="height: 100px; padding: 5px"></mat-divider>
+  <img src="assets/img/user.png" class="rightPadding" />
+  <span class="lastRefer" (click)="signOut()">Sign out</span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" *ngIf="showMenu">
+    <app-side-menu></app-side-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div [ngClass]="showMenu ? 'content' : ''">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

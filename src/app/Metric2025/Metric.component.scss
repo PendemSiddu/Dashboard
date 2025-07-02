@@ -1,0 +1,101 @@
+/* Table container */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Roboto', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  margin: 20px auto;
+  max-height: 250px;
+  background-color: #ffffff;
+
+  th, td {
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Blue color for heading row only */
+  th {
+    background-color: #159bd7;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* Cell styles */
+  td {
+    color: #000000;
+    font-weight: 400;
+  }
+
+  /* First column (Program Name) left-aligned */
+  td:first-child {
+    text-align: left;
+    padding-left: 16px;
+  }
+
+  /* Alternating row colors */
+  tr:nth-child(even) {
+    background-color: #c2e7ff;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+
+  /* Hover effect */
+  tr:hover {
+    // background-color: #e6f3ff;
+    transition: background-color 0.3s ease;
+  }
+}
+
+/* Chart header */
+.chartHeader {
+  h1 {
+    color: #000000;
+    // font-weight: 600;
+    margin: 0 0 25px 0;
+    text-align: left;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Verdana, sans-serif;
+  }
+}
+
+/* Material card */
+mat-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .table {
+    width: 95%;
+    max-height: 400px;
+
+    th, td {
+      padding: 8px 6px;
+      font-size: 0.85rem;
+    }
+  }
+
+  .chartHeader h1 {
+    font-size: 1.6rem;
+    padding-left: 15px;
+  }
+}

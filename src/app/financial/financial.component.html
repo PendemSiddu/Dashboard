@@ -1,0 +1,295 @@
+<mat-card >
+  <div class="chartWrapper">
+    <div class="chartHeader">
+      <div class="row align-items-baseline">
+        <div class="col-12">
+         <div class="row">
+<div class="col-6">
+<h3>Financial Tracking</h3>
+</div>
+<div class="col-6" style="float: right; text-align: end">
+<label for="fiscal-quarters"> Year &nbsp;</label>
+<select [(ngModel)]="selectedOptions">
+
+  <option>CY-2025</option>
+  <option>CY-2024</option>
+  <option>CY-2023</option>
+
+
+</select>
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+
+<div *ngIf="selectedOptions === 'CY-2023'">
+<div class="row" style="align-items: baseline;" >
+<div class="col-4">
+<app-fin1></app-fin1>
+</div>
+<div class="col-4" >
+<app-fin2></app-fin2>
+</div>
+<div class="col-4">
+<app-fin3></app-fin3>
+</div>
+<BR />
+<BR />
+<div class="col-4">
+<app-Fin4></app-Fin4>
+</div>
+<div class="col-4">
+<app-Fin5></app-Fin5>
+</div>
+<div class="col-4">
+<app-Fin6></app-Fin6>
+</div>
+<br />
+<br />
+<br  />
+<div class="col-4">
+<app-Fin7></app-Fin7>
+</div>
+<div class="col-4">
+<app-Fin8></app-Fin8>
+</div>
+<div class="col-4">
+<app-Fin9></app-Fin9>
+</div>
+<div class="col-4">
+  <app-Fin12></app-Fin12>
+  </div>
+</div>
+</div>
+</div>
+<div *ngIf="selectedOptions === 'CY-2024'" >
+  <app-Fin10></app-Fin10>
+</div>
+<div *ngIf="selectedOptions === 'CY-2025'" >
+  <app-Newgraph></app-Newgraph>
+</div>
+
+</mat-card>
+<BR />
+<br />
+
+
+<!-- <div class="row" *ngIf="role == 1 || role == 2">
+<div class="col-12">
+<mat-card>
+  <div class="chartWrapper">
+    <div class="chartHeader">
+      <div class="row align-items-baseline">
+        <div class="col-6">
+          <h3>Overall PO Burn Down</h3>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-8">
+        <div id="fin3" style="width: 100%; height: 500px"></div>
+      </div>
+      <div class="col-4">
+        <table class="table" style="font-size: 12px">
+          <thead>
+            <th>Month</th>
+            <th style="text-align: right; background: #2ecc71">Actual</th>
+            <th style="text-align: right; background: #3498db">Planned</th>
+          </thead>
+          <tr *ngFor="let item of programNames; let i = index">
+            <ng-container
+              *ngIf="item.date != 'undefined' || item.date != ''"
+            >
+              <td>
+                <span *ngIf="item.date != 'undefined NaN'">{{
+                  item.date
+                }}</span>
+              </td>
+              <td style="text-align: right; background: #ebfbea">
+                <span *ngIf="item.value1">${{ formatK(item.value1) }}</span>
+              </td>
+              <td style="text-align: right; background: #ddeef9">
+                <span *ngIf="item.value2">${{ formatK(item.value2) }}</span>
+              </td>
+            </ng-container>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</mat-card>
+</div>
+</div>
+<br /> -->
+<!--
+<div class="row pageContent" *ngIf="role == 1">
+<div class="col-12">
+<mat-card>
+  <div class="chartWrapper">
+    <div class="chartHeader">
+      <div class="row align-items-baseline">
+        <div class="col-12">
+          <h3>Financial Tracking</h3>
+        </div>
+      </div>
+    </div>
+    <div id="fin1" style="width: 100%; height: 500px"></div>
+  </div>
+</mat-card>
+</div>
+</div>-->
+
+
+
+<div *ngIf="selectedOptions === 'CY-2023'">
+<app-financial2></app-financial2>
+</div>
+
+
+<div *ngIf="selectedOptions === 'CY-2023'">
+<app-new-po-chart></app-new-po-chart>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<app-monthly-consumption-report></app-monthly-consumption-report>
+
+<div class="row" *ngIf="role == 1">
+<div class="col-12">
+<mat-card>
+  <div *ngIf="selectedOptions === 'CY-2023'">
+  <div class="chartWrapper">
+    <div class="chartHeader">
+      <div class="row align-items-baseline">
+        <div class="col-6">
+          <h3>Program wise – Planned vs Actual per Program</h3>
+        </div>
+        <div class="col-6" style="text-align: end">
+          <label>Program &nbsp;</label>
+
+          <select (change)="changeGraph()" [(ngModel)]="progm">
+            <ng-container *ngFor="let food of finance; let i = index">
+              <option [value]="i + 1">
+                {{ food.key }}
+              </option>
+            </ng-container>
+          </select>
+          <br />
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-8">
+        <div id="fin4" style="width: 100%; height: 500px"></div>
+      </div>
+      <div class="col-4">
+        <table class="table" style="font-size: 12px">
+          <thead>
+            <th>Month</th>
+            <th style="text-align: right; background: #3498db">Planned</th>
+            <th style="text-align: right; background: #2ecc71">Actual</th>
+            <th style="text-align: right; background: #b3df56">Savings</th>
+          </thead>
+          <tr *ngFor="let item of finance7; let i = index">
+            <ng-container *ngIf="item.date != 'undefined'">
+              <td>
+                <span *ngIf="item.date != 'undefined NaN'">{{
+                  item.date
+                }}</span>
+              </td>
+              <td style="text-align: right; background-color: #ddeef9">
+                <span >${{ formatK(item.value1) }}</span>
+              </td>
+              <td style="text-align: right; background-color: #ebfbea">
+                <span >${{ formatK(item.value2) }}</span>
+              </td>
+              <td style="text-align: right; background-color: #eef6c1">
+                <span >${{ formatK((item.value2*0.044) ) }}</span>
+              </td>
+            </ng-container>
+          </tr>
+          <tr>
+            <td style="text-align: center ; font-weight: bold;">Total</td>
+            <td style="text-align: right; background-color: #ddeef9; font-weight: bold;">${{ formatK(val1) }}
+            </td>
+           
+            <td style="text-align: right; background-color: #ebfbea; font-weight: bold; ">
+              ${{ formatK(val2) }}
+            </td>
+            <td style="text-align: right; background-color: #eef6c1; font-weight: bold;">${{ formatK(val2*0.044) }}</td>
+           
+          </tr>
+        </table>
+        <br />
+        <table class="table" style="font-size: 12px; font-weight: bold">
+          <tr>
+            <td>Total Planned</td>
+            <td>{{ formatK(val1) }}</td>
+          </tr>
+          <tr>
+            <td>Actual consumed</td>
+            <td>{{ formatK(val2) }}</td>
+          </tr>
+          <tr>
+            <td>Budget left for FY</td>
+            <td>{{ formatK(minus) }}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</mat-card>
+</div>
+</div>
+<br /> -->
+
+<!-- <div class="row" *ngIf="role == 2 || role == 3" >
+<div class="col-12">
+<mat-card>
+  <div class="chartWrapper">
+    <div class="chartHeader">
+      <div class="row align-items-baseline">
+        <div class="col-6">
+          <h3>Overall – Planned vs Actual : Monthwise</h3>
+        </div>
+      </div>
+    </div>
+    <div id="fin5" style="width: 100%; height: 500px"></div>
+  </div>
+</mat-card>
+</div>
+</div> -->
+

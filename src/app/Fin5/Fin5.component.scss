@@ -1,0 +1,21 @@
+.table-chart-container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  justify-content: space-between;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.table1{
+ 
+    font-size: 12px;
+    width: 100%;
+    align-items: baseline;
+    th, td {
+      
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #f2f2f2;
+    }
+   
+  }

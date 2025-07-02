@@ -1,0 +1,79 @@
+.dropzone-area {
+    .dropzone {
+        position       : relative;
+        border         : 2px dashed #006BB6;
+        min-height     : 170px;
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        flex-direction : column;
+        border-radius  : 4px;
+        .file-formats {
+            font-size: 12px;
+        }
+        .file-upload-icon {
+            font-size  : 70px;
+            line-height: 1.2;
+            color      : #006BB6;
+        }
+        p {
+            font-size    : 18px;
+            font-weight  : 400;
+            margin-bottom: 5px;
+        }
+    }
+    .drop-files-list {
+        .single-drop-file,
+        .uploaded-file-details {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .single-drop-file {
+            justify-content: space-between;
+            height: 58px;
+            background-color: #EBEBEB;
+            border-radius: 4px;
+            padding: 16px;
+            &:first-child {
+                margin-top: 16px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+            .dummyphoto {
+                margin-right: 16px;
+                color: #006BB6;
+            }
+            .fileSize {
+                margin-left : 8px;
+                padding-left: 10px;
+                &:after {
+                    left: 0;
+                }
+            }
+        }
+    }
+    .upload-image-title {
+        font-size    : 28px;
+        font-weight  : 500;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #fileDropRef {
+        opacity : 0;
+        position: absolute;
+        z-index : 2;
+        width   : 100%;
+        height  : 100%;
+        top     : 0;
+        left    : 0;
+    }
+    .delete-file {
+        line-height: 0;
+        cursor: pointer;
+        .mat-icon {
+            color: #DC3545;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+#chart-container {
+    position: relative;
+}
+
+#custom-labels {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.greenCircle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #3C97DA;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.yellowCircle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #FFCEA9;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.greyCircle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #DDDDDD;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.redCircle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #9ECBED;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+th,
+td {
+    padding: 2px !important;
+    border: 1px solid #f2f2f2;
+    white-space: nowrap;
+}
+
+table {
+    border: 1px solid #f2f2f2;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.breakWord {
+    word-break: break-all;
+}
+
+.highlighted {
+    background-color: #9797fb;
+}
+
+.babyPink {
+    background-color: #fbffd5;
+}
+
+.lightBlue {
+    background-color: #ede5ff;
+}
+
+.wblue {
+    background-color: #eafff4;
+}
+.custom-label {
+    position: absolute;
+    top: 20px;
+    font-weight: bold;
+    background-color: #ccc;
+    border: 2px solid #000;
+    padding: 5px 10px;
+    opacity: 0.3;
+}

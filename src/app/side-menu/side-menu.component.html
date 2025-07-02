@@ -1,0 +1,128 @@
+<mat-nav-list>
+  <!--
+  <mat-list-item role="listitem"  routerLink="/home">
+    <div class="site mat-icon" > </div>
+    <span class="menu-lead">Site Performance</span>
+  </mat-list-item>-->
+  <mat-list-item
+    role="listitem"
+    routerLink="/dpvdashboard"
+    *ngIf="role == 1 || role == 2"
+    title="Engagement Health"
+  >
+    <div class="site mat-icon"></div>
+  </mat-list-item>
+ 
+  <!-- <mat-list-item
+  role="listitem"
+  routerLink="/sow-contractor"
+  *ngIf="role == 1 || role == 2 || role == 3"
+  title="Sow Contract"
+>
+<img src="assets/img/metrics.png" /> 
+<div class="contract mat-icon"></div>
+</mat-list-item>  -->
+
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/resource-metrics"
+    *ngIf="role == 3 || role == 1"
+    title="Resource Metrics"
+  >
+    <div class="resource mat-icon"></div>
+    <!-- <img src="assets/img/b3.svg" class="mat-icon"> -->
+  </mat-list-item>
+
+  <mat-list-item
+  role="listitem"
+  routerLink="/program-status"
+  *ngIf="role == 1 || role == 2"
+  title="Resource utlization"
+>
+  <div class="program mat-icon"></div>
+  
+</mat-list-item>
+
+<mat-list-item
+role="listitem"
+routerLink="/program-metrics"
+title="Program Metrics"
+>
+<div class="inventory mat-icon"></div>
+<!-- <img src="assets/img/b3.svg" class="mat-icon"> -->
+</mat-list-item>
+
+<mat-list-item
+role="listitem"
+routerLink="/Metric"
+title="Metrics">
+<div class="metrics mat-icon"></div>
+<!-- <img src="assets/img/b3.svg" class="mat-icon"> -->
+</mat-list-item>
+
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/invoice"
+    *ngIf="role == 1 || role == 2"
+    title="Invoice status"
+  >
+    <div class="invoice mat-icon"></div>
+    <!-- <img src="assets/img/b1.svg" class="mat-icon"> -->
+  </mat-list-item>
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/financial"
+    *ngIf="role == 1 || role == 2 || role == 3"
+    title="Financial"
+  >
+    <div class="finacial mat-icon"></div>
+  </mat-list-item>
+
+
+ 
+
+
+  <!-- <mat-list-item
+    role="listitem"
+    routerLink="/program-status"
+    *ngIf="role == 1 || role == 2"
+    title="Resource utlization"
+  >
+    <div class="program mat-icon"></div>
+    
+  </mat-list-item>
+
+ 
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/resource-metrics"
+    *ngIf="role == 3 || role == 1"
+    title="Resource Metrics"
+  >
+    <div class="resource mat-icon"></div>
+    <!-- <img src="assets/img/b3.svg" class="mat-icon"> -->
+  <!-- </mat-list-item>
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/program-metrics"
+    title="Program Metrics"
+  >
+    <div class="inventory mat-icon"></div> -->
+    <!-- <img src="assets/img/b3.svg" class="mat-icon"> -->
+  <!-- </mat-list-item>
+
+  <mat-list-item
+    role="listitem"
+    routerLink="/financial"
+    *ngIf="role == 1 || role == 2 || role == 3"
+    title="Financial"
+  >
+    <div class="finacial mat-icon"></div>
+  </mat-list-item>
+   --> 
+</mat-nav-list>

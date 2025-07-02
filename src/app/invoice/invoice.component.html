@@ -1,0 +1,246 @@
+<div class="chartHeader">
+  <div class="row align-items-baseline">
+    <div class="row"></div>
+    <div class="col-12">
+      <mat-card>
+        <div class="row">
+          <div class="col-3 pageTitle">Invoice Status</div>
+          <div class="col-6" style="margin: auto">
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col-10 col6" style="margin: auto">
+                <div class="flex-container">
+                  <span class="gl"></span>
+                  <span class="fl">Submitted</span>
+                </div>
+                <div class="flex-container">
+                  <span class="rl"></span>
+                  <span class="fl"> Approved&nbsp;&nbsp;</span>
+                </div>
+                <div class="flex-container">
+                  <span class="grl"></span>
+                  <span class="fl"> No due</span>
+                </div>
+                <div class="flex-container">
+                  <span class="grl" style="background-color: red"></span>
+                  <span class="fl"> Due</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3" style="float: right; text-align: end">
+            <label for="fiscal-quarters"> Quarters &nbsp;</label>
+            
+            <select [(ngModel)]="selectedOptions">
+              <option>Q1-23</option>
+              <option>Q2-23</option>
+              <option>Q3-23</option>
+              <option>Q4-23</option>
+              <option>Q1-24</option>
+              <option>Q2-24</option>
+              <option>Q3-24</option>
+              <option>Q4-24</option>
+              <option>Q1-25</option>
+              <option>Q2-25</option>
+            </select>
+            
+          </div>
+        </div>
+        <br />
+        <table class="table" style="width: 90%" >
+          <tr *ngIf="datas.length  > 0"
+            style="text-align: center; font-weight: bold; background: #d5f1ff"
+          >
+            <td rowspan="1"></td>
+            <td *ngIf="selectedOptions === 'Q1-23' " colspan="3">{{ datas[0]?.value1}}</td>
+            <td *ngIf="selectedOptions === 'Q1-23'" colspan="3">{{ datas[0]?.value4}}</td>
+            <td *ngIf="selectedOptions === 'Q1-23'" colspan="3">{{ datas[0]?.value7}}</td>
+            <td *ngIf="selectedOptions === 'Q2-23'" colspan="3">{{ datas[0]?.value10}}</td>
+            <td *ngIf="selectedOptions === 'Q2-23'" colspan="3">{{ datas[0]?.value13}}</td>
+            <td *ngIf="selectedOptions === 'Q2-23'" colspan="3">{{ datas[0]?.value16}}</td>
+            <td *ngIf="selectedOptions === 'Q3-23'" colspan="3">{{ datas[0]?.value19}}</td>
+            <td *ngIf="selectedOptions === 'Q3-23'" colspan="3">{{ datas[0]?.value22}}</td>
+            <td *ngIf="selectedOptions === 'Q3-23'" colspan="3">{{ datas[0]?.value25}}</td>
+            <td *ngIf="selectedOptions === 'Q4-23'" colspan="3">{{ datas[0]?.value28}}</td>
+            <td *ngIf="selectedOptions === 'Q4-23'" colspan="3">{{ datas[0]?.value31}}</td>
+            <td *ngIf="selectedOptions === 'Q4-23'" colspan="3">{{ datas[0]?.value36}}</td>
+            <td *ngIf="selectedOptions === 'Q1-24' " colspan="3">{{ datas[0]?.value1}}</td>
+            <td *ngIf="selectedOptions === 'Q1-24'" colspan="3">{{ datas[0]?.value4}}</td>
+            <td *ngIf="selectedOptions === 'Q1-24'" colspan="3">{{ datas[0]?.value7}}</td>
+            <td *ngIf="selectedOptions === 'Q2-24' " colspan="3">{{ datas[0]?.value10}}</td>
+            <td *ngIf="selectedOptions === 'Q2-24'" colspan="3">{{ datas[0]?.value13}}</td>
+            <td *ngIf="selectedOptions === 'Q2-24'" colspan="3">{{ datas[0]?.value16}}</td>
+            <td *ngIf="selectedOptions === 'Q3-24' " colspan="3">{{ datas[0]?.value19}}</td>
+            <td *ngIf="selectedOptions === 'Q3-24'" colspan="3">{{ datas[0]?.value22}}</td>
+            <td *ngIf="selectedOptions === 'Q3-24'" colspan="3">{{ datas[0]?.value25}}</td>
+            <td *ngIf="selectedOptions === 'Q4-24'" colspan="3">{{ datas[0]?.value28}}</td>
+            <td *ngIf="selectedOptions === 'Q4-24'" colspan="3">{{ datas[0]?.value31}}</td>
+            <td *ngIf="selectedOptions === 'Q4-24'" colspan="3">{{ datas[0]?.value36}}</td>
+            <td *ngIf="selectedOptions === 'Q1-25'" colspan="3">{{ datas[0]?.value39}}</td>
+            <td *ngIf="selectedOptions === 'Q1-25'" colspan="3">{{ datas[0]?.value42}}</td>
+            <td *ngIf="selectedOptions === 'Q1-25'" colspan="3">{{ datas[0]?.value45}}</td>
+            <td *ngIf="selectedOptions === 'Q2-25'" colspan="3">{{ datas[0]?.value48}}</td>
+            <td *ngIf="selectedOptions === 'Q2-25'" colspan="3">{{ datas[0]?.value51}}</td>
+            <td *ngIf="selectedOptions === 'Q2-25'" colspan="3">{{ datas[0]?.value53}}</td>
+          </tr>
+          <tr
+            style="
+              text-align: center;
+              background-color: #159bd7;
+              color: white;
+              font-size: 12px;
+            ">
+            <td>Projects</td>
+            <td>
+              <small>Submitted by HCL</small>
+            </td>
+            <td>
+              <small>Approved by Abbott</small>
+            </td>
+            <td>
+              <small>Payment Status</small>
+            </td>
+            <td>
+              <small>Submitted by HCL</small>
+            </td>
+            <td>
+              <small>Approved by Abbott</small>
+            </td>
+            <td>
+              <small>Payment Status</small>
+            </td>
+            <td>
+              <small>Submitted by HCL</small>
+            </td>
+            <td>
+              <small>Approved by Abbott</small>
+            </td>
+            <td>
+              <small>Payment Status</small>
+            </td>
+          </tr>
+          
+          <tr *ngFor="let i of datas.slice(2);let j=index">
+            
+           
+            <ng-container *ngIf="selectedOptions !== 'Q1-23' || (j !== 11 && j !== 12 && j !== 13 && j!== 14 && j!== 15 && j!== 16 && j!== 17 && j!== 18 && j!== 19 && j!== 20 && j!== 21 && j!== 22 && j!== 23 && j!== 24 && j!== 25 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) ">
+            <ng-container *ngIf="selectedOptions !== 'Q2-23' || (j !== 11 && j !== 12 && j !== 13 && j!== 14 && j!== 15 && j!== 16 && j!== 17 && j!== 18 && j!== 19 && j!== 20 && j!== 21 && j!== 22 && j!== 23 && j!== 24 && j!== 25 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) ">
+            <ng-container *ngIf="selectedOptions !== 'Q3-23' || (j !== 11 && j !== 12 && j !== 13 && j!== 14 && j!== 15 && j!== 16 && j!== 17 && j!== 18 && j!== 19 && j!== 20 && j!== 21  && j!== 22 && j!== 23 && j!== 24 && j!== 25 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) ">
+            <ng-container *ngIf="selectedOptions !== 'Q4-23' || (j !== 11 && j !== 12 && j !== 13 && j!== 14 && j!== 15 && j!== 16 && j!== 17 && j!== 18 && j!== 19 && j!== 20 && j!== 21 && j!== 22 && j!== 23 && j!== 24 && j!== 25 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37  ) ">
+            <ng-container *ngIf="selectedOptions !== 'Q1-24' || (j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j!== 13 && j!== 24 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37) ">
+            <ng-container *ngIf="selectedOptions !== 'Q2-24' || (j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j!== 12 && j!== 19 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) "> 
+            <ng-container *ngIf="selectedOptions !== 'Q3-24' || (j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j!== 12 && j!== 19 && j!== 20 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) "> 
+            <ng-container *ngIf="selectedOptions !== 'Q4-24' || (j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 19 && j!== 20 && j!== 26 && j!==27 && j!==28 && j!==29 && j!==30 && j!==31 && j!==32 && j!==33 && j!==34 && j!==35 && j!==36 && j!==37 ) "> 
+            <ng-container *ngIf="selectedOptions !== 'Q1-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37 ) ">
+            <ng-container *ngIf="selectedOptions !== 'Q2-25' || ( j !== 1 && j !== 3 && j !== 4 && j !== 5 && j!== 6 && j!== 7 && j!== 8 && j!== 9 && j!== 10 && j !== 11  && j!== 12 && j!== 13 && j!== 14 && j!== 15 && j!==16 && j!==17 && j!==18 && j!==19 && j!==20 && j!==21 && j!==22 && j!==23 && j!==24 && j!==25 && j!==37) ">
+
+              <td >{{i.key}}</td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value1=='green','yellowCircle':i.value1=='yellow','greyCircle':i.value1=='grey','redCircle':i.value1=='red'}"></td>    
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value2=='green','yellowCircle':i.value2=='yellow','greyCircle':i.value2=='grey','redCircle':i.value2=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value3=='green','yellowCircle':i.value3=='yellow','greyCircle':i.value3=='grey','redCircle':i.value3=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value4=='green','yellowCircle':i.value4=='yellow','greyCircle':i.value4=='grey','redCircle':i.value4=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value5=='green','yellowCircle':i.value5=='yellow','greyCircle':i.value5=='grey','redCircle':i.value5=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value6=='green','yellowCircle':i.value6=='yellow','greyCircle':i.value6=='grey','redCircle':i.value6=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value7=='green','yellowCircle':i.value7=='yellow','greyCircle':i.value7=='grey','redCircle':i.value7=='red'}"></td> 
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value8=='green','yellowCircle':i.value8=='yellow','greyCircle':i.value8=='grey','redCircle':i.value8=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-23'" [ngClass]="{'greenCircle':i.value9=='green','yellowCircle':i.value9=='yellow','greyCircle':i.value9=='grey','redCircle':i.value9=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value10=='green','yellowCircle':i.value10=='yellow','greyCircle':i.value10=='grey','redCircle':i.value10=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value11=='green','yellowCircle':i.value11=='yellow','greyCircle':i.value11=='grey','redCircle':i.value11=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value12=='green','yellowCircle':i.value12=='yellow','greyCircle':i.value12=='grey','redCircle':i.value12=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value13=='green','yellowCircle':i.value13=='yellow','greyCircle':i.value13=='grey','redCircle':i.value13=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value14=='green','yellowCircle':i.value14=='yellow','greyCircle':i.value14=='grey','redCircle':i.value14=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value15=='green','yellowCircle':i.value15=='yellow','greyCircle':i.value15=='grey','redCircle':i.value15=='red'}"></td>    
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value16=='green','yellowCircle':i.value16=='yellow','greyCircle':i.value16=='grey','redCircle':i.value16=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value17=='green','yellowCircle':i.value17=='yellow','greyCircle':i.value17=='grey','redCircle':i.value17=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-23'" [ngClass]="{'greenCircle':i.value18=='green','yellowCircle':i.value18=='yellow','greyCircle':i.value18=='grey','redCircle':i.value18=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value19=='green','yellowCircle':i.value19=='yellow','greyCircle':i.value19=='grey','redCircle':i.value19=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value20=='green','yellowCircle':i.value20=='yellow','greyCircle':i.value20=='grey','redCircle':i.value20=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value21=='green','yellowCircle':i.value21=='yellow','greyCircle':i.value21=='grey','redCircle':i.value21=='red'}"></td> 
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value22=='green','yellowCircle':i.value22=='yellow','greyCircle':i.value22=='grey','redCircle':i.value22=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value23=='green','yellowCircle':i.value23=='yellow','greyCircle':i.value23=='grey','redCircle':i.value23=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value24=='green','yellowCircle':i.value24=='yellow','greyCircle':i.value24=='grey','redCircle':i.value24=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value25=='green','yellowCircle':i.value25=='yellow','greyCircle':i.value25=='grey','redCircle':i.value25=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value26=='green','yellowCircle':i.value26=='yellow','greyCircle':i.value26=='grey','redCircle':i.value26=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-23'" [ngClass]="{'greenCircle':i.value27=='green','yellowCircle':i.value27=='yellow','greyCircle':i.value27=='grey','redCircle':i.value27=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value28=='green','yellowCircle':i.value28=='yellow','greyCircle':i.value28=='grey','redCircle':i.value28=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value29=='green','yellowCircle':i.value29=='yellow','greyCircle':i.value29=='grey','redCircle':i.value29=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value30=='green','yellowCircle':i.value30=='yellow','greyCircle':i.value30=='grey','redCircle':i.value30=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value31=='green','yellowCircle':i.value31=='yellow','greyCircle':i.value31=='grey','redCircle':i.value31=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value32=='green','yellowCircle':i.value32=='yellow','greyCircle':i.value32=='grey','redCircle':i.value32=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value33=='green','yellowCircle':i.value33=='yellow','greyCircle':i.value33=='grey','redCircle':i.value33=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value34=='green','yellowCircle':i.value34=='yellow','greyCircle':i.value34=='grey','redCircle':i.value34=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value35=='green','yellowCircle':i.value35=='yellow','greyCircle':i.value35=='grey','redCircle':i.value35=='red'}"></td>    
+            <td *ngIf="selectedOptions === 'Q4-23'" [ngClass]="{'greenCircle':i.value36=='green','yellowCircle':i.value36=='yellow','greyCircle':i.value36=='grey','redCircle':i.value36=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value37=='green','yellowCircle':i.value37=='yellow','greyCircle':i.value37=='grey','redCircle':i.value37=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value38=='green','yellowCircle':i.value38=='yellow','greyCircle':i.value38=='grey','redCircle':i.value38=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value39=='green','yellowCircle':i.value39=='yellow','greyCircle':i.value39=='grey','redCircle':i.value39=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value40=='green','yellowCircle':i.value40=='yellow','greyCircle':i.value40=='grey','redCircle':i.value40=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value41=='green','yellowCircle':i.value41=='yellow','greyCircle':i.value41=='grey','redCircle':i.value41=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value42=='green','yellowCircle':i.value42=='yellow','greyCircle':i.value42=='grey','redCircle':i.value42=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value43=='green','yellowCircle':i.value43=='yellow','greyCircle':i.value43=='grey','redCircle':i.value43=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value44=='green','yellowCircle':i.value44=='yellow','greyCircle':i.value44=='grey','redCircle':i.value44=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-24'" [ngClass]="{'greenCircle':i.value45=='green','yellowCircle':i.value45=='yellow','greyCircle':i.value45=='grey','redCircle':i.value45=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value46=='green','yellowCircle':i.value46=='yellow','greyCircle':i.value46=='grey','redCircle':i.value46=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value47=='green','yellowCircle':i.value47=='yellow','greyCircle':i.value47=='grey','redCircle':i.value47=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value48=='green','yellowCircle':i.value48=='yellow','greyCircle':i.value48=='grey','redCircle':i.value48=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value49=='green','yellowCircle':i.value49=='yellow','greyCircle':i.value49=='grey','redCircle':i.value49=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value50=='green','yellowCircle':i.value50=='yellow','greyCircle':i.value50=='grey','redCircle':i.value50=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value51=='green','yellowCircle':i.value51=='yellow','greyCircle':i.value51=='grey','redCircle':i.value51=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value52=='green','yellowCircle':i.value52=='yellow','greyCircle':i.value52=='grey','redCircle':i.value52=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value53=='green','yellowCircle':i.value53=='yellow','greyCircle':i.value53=='grey','redCircle':i.value53=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-24'" [ngClass]="{'greenCircle':i.value54=='green','yellowCircle':i.value54=='yellow','greyCircle':i.value54=='grey','redCircle':i.value54=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value55=='green','yellowCircle':i.value55=='yellow','greyCircle':i.value55=='grey','redCircle':i.value55=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value56=='green','yellowCircle':i.value56=='yellow','greyCircle':i.value56=='grey','redCircle':i.value56=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value57=='green','yellowCircle':i.value57=='yellow','greyCircle':i.value57=='grey','redCircle':i.value57=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value58=='green','yellowCircle':i.value58=='yellow','greyCircle':i.value58=='grey','redCircle':i.value58=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value59=='green','yellowCircle':i.value59=='yellow','greyCircle':i.value59=='grey','redCircle':i.value59=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value60=='green','yellowCircle':i.value60=='yellow','greyCircle':i.value60=='grey','redCircle':i.value60=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value61=='green','yellowCircle':i.value61=='yellow','greyCircle':i.value61=='grey','redCircle':i.value61=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value62=='green','yellowCircle':i.value62=='yellow','greyCircle':i.value62=='grey','redCircle':i.value62=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q3-24'" [ngClass]="{'greenCircle':i.value63=='green','yellowCircle':i.value63=='yellow','greyCircle':i.value63=='grey','redCircle':i.value63=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value64=='green','yellowCircle':i.value64=='yellow','greyCircle':i.value64=='grey','redCircle':i.value64=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value65=='green','yellowCircle':i.value65=='yellow','greyCircle':i.value65=='grey','redCircle':i.value65=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value66=='green','yellowCircle':i.value66=='yellow','greyCircle':i.value66=='grey','redCircle':i.value66=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value67=='green','yellowCircle':i.value67=='yellow','greyCircle':i.value67=='grey','redCircle':i.value67=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value68=='green','yellowCircle':i.value68=='yellow','greyCircle':i.value68=='grey','redCircle':i.value68=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value69=='green','yellowCircle':i.value69=='yellow','greyCircle':i.value69=='grey','redCircle':i.value69=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value70=='green','yellowCircle':i.value70=='yellow','greyCircle':i.value70=='grey','redCircle':i.value70=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value71=='green','yellowCircle':i.value71=='yellow','greyCircle':i.value71=='grey','redCircle':i.value71=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q4-24'" [ngClass]="{'greenCircle':i.value72=='green','yellowCircle':i.value72=='yellow','greyCircle':i.value72=='grey','redCircle':i.value72=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value73=='green','yellowCircle':i.value73=='yellow','greyCircle':i.value73=='grey','redCircle':i.value73=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value74=='green','yellowCircle':i.value74=='yellow','greyCircle':i.value74=='grey','redCircle':i.value74=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value75=='green','yellowCircle':i.value75=='yellow','greyCircle':i.value75=='grey','redCircle':i.value75=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value76=='green','yellowCircle':i.value76=='yellow','greyCircle':i.value76=='grey','redCircle':i.value76=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value77=='green','yellowCircle':i.value77=='yellow','greyCircle':i.value77=='grey','redCircle':i.value77=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value78=='green','yellowCircle':i.value78=='yellow','greyCircle':i.value78=='grey','redCircle':i.value78=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value79=='green','yellowCircle':i.value79=='yellow','greyCircle':i.value79=='grey','redCircle':i.value79=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value80=='green','yellowCircle':i.value80=='yellow','greyCircle':i.value80=='grey','redCircle':i.value80=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q1-25'" [ngClass]="{'greenCircle':i.value81=='green','yellowCircle':i.value81=='yellow','greyCircle':i.value81=='grey','redCircle':i.value81=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value82=='green','yellowCircle':i.value82=='yellow','greyCircle':i.value82=='grey','redCircle':i.value82=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value83=='green','yellowCircle':i.value83=='yellow','greyCircle':i.value83=='grey','redCircle':i.value83=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value84=='green','yellowCircle':i.value84=='yellow','greyCircle':i.value84=='grey','redCircle':i.value84=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value85=='green','yellowCircle':i.value85=='yellow','greyCircle':i.value85=='grey','redCircle':i.value85=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value86=='green','yellowCircle':i.value86=='yellow','greyCircle':i.value86=='grey','redCircle':i.value86=='red'}" ></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value87=='green','yellowCircle':i.value87=='yellow','greyCircle':i.value87=='grey','redCircle':i.value87=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value88=='green','yellowCircle':i.value88=='yellow','greyCircle':i.value88=='grey','redCircle':i.value88=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value89=='green','yellowCircle':i.value89=='yellow','greyCircle':i.value89=='grey','redCircle':i.value89=='red'}"></td>
+            <td *ngIf="selectedOptions === 'Q2-25'" [ngClass]="{'greenCircle':i.value90=='green','yellowCircle':i.value90=='yellow','greyCircle':i.value90=='grey','redCircle':i.value90=='red'}"></td>
+          </ng-container>  
+          </ng-container>
+          </ng-container>
+          </ng-container>
+          </ng-container>
+          </ng-container>
+         </ng-container>
+        </ng-container>
+        </ng-container>
+        </ng-container>
+          </tr>
+    
+            
+        </table> 
+      </mat-card>
+    </div>
+  </div>
+</div>
