@@ -1,0 +1,46 @@
+# Node & Angular
+node_modules/
+dist/
+build/
+.tmp/
+coverage/
+
+# VSCode
+.vscode/
+.history/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.*
+
+# Compiled output
+out-tsc/
+
+# Angular specific
+.angular/cache/
+
+# Misc
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional: Ignore test coverage
+coverage/
+
+# Optional: Ignore local SQLite DBs
+*.sqlite
+*.db
+
+# Optional: Ignore Excel and backup files
+*.xlsx
+*.zip
+*.bak
