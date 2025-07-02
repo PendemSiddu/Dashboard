@@ -1,0 +1,82 @@
+$base-color: #006BB6;
+$secondary-color: #333333;
+$default-color: #AAAAAA;
+$disabled-color: #D6D6D6;
+$warning-color: #F5821E;
+$error-color: #DC3545;
+$success-color: #28A745;
+$dark-color: #1B1B1B;
+$lightgray: #EDEDED;
+
+/* text colors */
+$text-primary: $base-color;
+$text-secondary: $secondary-color;
+$text-default: $default-color;
+$text-disabled: $disabled-color;
+$text-warning: $warning-color;
+$text-danger: $error-color;
+$text-success: $success-color;
+$text-dark: $dark-color;
+
+/* background colors */
+$bg-primary: $base-color;
+$bg-secondary: $secondary-color;
+$bg-default: $default-color;
+$bg-disabled: $disabled-color;
+$bg-warning: $warning-color;
+$bg-danger: $error-color;
+$bg-success: $success-color;
+$bg-dark: $dark-color;
+$bg-light: #EBEBEB;
+$bg-light2: $lightgray;
+
+/* border colors */
+$border: $disabled-color;
+$border-secondary-color: $secondary-color;
+
+.mat-raised-button.mat-primary {
+    background-color: $bg-primary;
+}
+.mat-raised-button.mat-success {
+    background-color: $bg-success;
+    color: #fff;
+}
+.mat-raised-button.mat-warn {
+    background-color: $bg-warning;
+}
+.mat-raised-button.mat-accent {
+    background-color: $bg-danger;
+}
+
+.mat-button.mat-primary {
+    color: $text-primary;
+}
+
+.mat-progress-bar.mat-success .mat-progress-bar-fill::after {
+    background-color: #ADD136 !important;
+}
+
+.btn-light {
+    background-color: $bg-light !important;
+}
+
+.bg-dark, .btn-dark {
+    background-color: $bg-secondary !important;
+    border-color: $bg-secondary;
+}
+.bg-light {
+    background-color: $bg-disabled !important;
+}
+
+.bg-light2 {
+    background-color: $bg-light2;
+}
+
+.text-link .mat-button-wrapper {
+    border-bottom: 1px solid #006bb6;
+    font-weight: 500;
+}
+
+.text-warning {
+    color: $text-warning !important;
+}

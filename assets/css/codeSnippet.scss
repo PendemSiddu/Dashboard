@@ -1,0 +1,132 @@
+.codeSnippet .codeSnippetTabs {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.codeSnippet .codeSnippetTabs li {
+    display: inline-block;
+}
+
+.codeSnippet .codeSnippetTabs li>a {
+    display: inline-block;
+    color: #006bb6;
+    font-size: 15px;
+    padding: 7px 6px;
+    line-height: 22px;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.codeSnippet .codeSnippetTabs li > div {
+    max-height: 0;
+    overflow  : hidden;
+    transition: max-height 0.3s linear;
+}
+
+.codeSnippet .codeSnippetTabs li.active > a {
+    background-color: #ffffff;
+    color: #006bb6;
+    display: block;
+    border-bottom: 1px solid #006bb6;
+    opacity: 1;
+}
+
+.codeSnippet .codeSnippetsTabContent {
+    border: 1px solid #c8c8c8;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.codeSnippet .codeSnippetsTabContent > div {
+    display: none;
+}
+
+.codeSnippet .codeSnippetsTabContent > div.active {
+    display: block;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 64px;
+    letter-spacing: 0.2px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 54px;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0.1px;
+}
+
+.trend {
+    font-size: 12px;
+}
+
+.fw-normalbold {
+    font-weight: 500;
+}
+
+.indicator {
+    display     : inline-block;
+    width       : 10px;
+    height      : 10px;
+    margin-right: 5px;
+}
+
+.block-label {
+    display: block;
+    color: #585858;
+    margin-bottom: 15px;
+}
+
+.mat-radio-button:not(:last-child) {
+    margin-right: 20px;
+}
+
+pre.code-snip {
+    position        : relative;
+    background-color: #e7e7e7;
+    // white-space     : inherit;
+    word-break      : keep-all;
+    border          : 1px solid #f0f0f0;
+    margin-bottom   : 0px;
+    padding: 0 10px;
+    max-height: 350px;
+
+    code {
+        margin: 0px 0;
+        padding: 0;
+        min-height: 50px;
+    }
+
+    .copy-button {
+        position        : absolute;
+        color           : white;
+        top             : 0px;
+        right           : 0px;
+        padding         : 4px 12px;
+        cursor          : pointer;
+        opacity         : 0;
+        transition      : all 0.2s linear 0s;
+        background-color: rgb(37, 55, 86);
+        border-radius   : 8px;
+        margin          : 8px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px !important;
+    }
+
+    &:hover .copy-button {
+        opacity: 1;
+    }
+}
